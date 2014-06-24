@@ -1,10 +1,27 @@
 <h2>Create a New Status</h2>
 <hr>
 
-<%= form_for @status do |f| %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  <br/>
-  <%= f.submit "Create Status" %>
-<% end %>
+<div class="well col-xs-6 col-xs-offset-3">
+  <% if @status.errors.any? %>
+    <div class="alert alert-danger">
+      <h4 class="text-center">
+        <strong>There were some errors</strong>
+      </h4>
+      <hr>
+      <ul>
+        <% @status.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
+  <%= form_for @status do |f| %>
+    <div class="control-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "form-control", rows: '10' %>
+    </div>
+    <br/>
+    <%= f.submit "Create Status", class: 'btn btn-primary' %>
+  <% end %>
+</div>

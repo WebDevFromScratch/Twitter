@@ -4,8 +4,12 @@
 <div class="col-xs-6 col-xs-offset-3">
   <h3 class="text-center">Your Latest Tweets</h3>
   <ul>
-    <% @user.statuses.each do |status| %>
-      <li class="well"><%= status.body %></li>
+    <% @user.statuses.reverse.each do |status| %>
+      <li class="well">
+        <p><%= status.body %></p>
+        <br>
+        <p class="text-right"><small>tweeted on <%= status.created_at %></small></p>
+      </li>
     <% end %>
   </ul>
   <p class="text-center">
