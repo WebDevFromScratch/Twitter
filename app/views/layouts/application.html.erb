@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header"><a class="navbar-brand" href="#">My Twitter</a></div>  
-  </nav>
+  <%= render 'layouts/top_nav' %>
 
   <div class="container">
+    <%= render 'layouts/flash_messages' %>
+
     <div class="row">
       <%= yield %>
     </div>

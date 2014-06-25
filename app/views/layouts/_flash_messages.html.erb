@@ -1,0 +1,9 @@
+<% if flash.keys.any? %>
+  <% flash.keys.each do |key| %>
+    <div class="alert alert-success">
+      <h4 class="text-center">
+        <%= flash[key] %>
+      </h4>
+    </div>
+  <% end %>
+<% end %>
