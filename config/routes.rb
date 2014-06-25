@@ -6,6 +6,7 @@ Rails.application.routes.draw do
                                                  #to be able to refer to this path
                                                  #later as 'user_path'
                                           #notice how that shows in routes (as a prefix)
+  resources :users, only: [:new, :create]
 
   #get '/:username/statuses/new', to: 'statuses#new', as: 'new_status'
   #post '/:username/statuses', to: 'statuses#create'

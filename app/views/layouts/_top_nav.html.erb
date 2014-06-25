@@ -1,3 +1,12 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header"><a class="navbar-brand" href="#">My Twitter</a></div>  
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">My Twitter</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><%= link_to 'Register', new_user_path %></li>
+    <li>
+      <a href="users/new">Login</a> <!-- change that when login feature implemented -->
+    </li>
+  </ul>
+  <%= link_to "New Status", new_status_path, class: "btn btn-primary btn navbar-btn navbar-right" %>
 </nav>

@@ -2,10 +2,7 @@
 <%= render 'shared/header', header: user_link %>
 
 <div class="col-xs-6 col-xs-offset-3">
-  <p class="text-center">
-    <%= link_to "New Tweet", new_status_path, class: "btn btn-lg btn-primary" %>
-  </p>
-  <h3 class="text-center">Your Latest Tweets</h3>
+  <h3 class="text-center">Your Latest Statuses</h3>
   <ul>
     <% @user.statuses.reverse.each do |status| %>
       <li class="well">
