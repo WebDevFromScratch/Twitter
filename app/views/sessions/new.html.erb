@@ -1,0 +1,13 @@
+<%= render 'shared/header', header: 'Log In' %>
+
+<div class="well col-xs-6 col-xs-offset-3">
+  <%= form_tag '/login', method:'post' do %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username, params[:username], class: "form-control" %> <!-- we can pass a default value for the field like we did with params[:username] -->
+    <br/>
+    <%= label_tag :password %>
+    <%= password_field_tag :password, '', class: "form-control" %>
+    <br/>
+    <%= submit_tag "Register", class: 'btn btn-primary' %>
+  <% end %>
+</div>
